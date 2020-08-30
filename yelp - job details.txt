@@ -1,0 +1,122 @@
+Skip to main content
+
+
+Find Jobs
+FIND WORK
+MY JOBS
+REPORTS
+MESSAGES
+Andre Goranico
+Job details
+
+Verify your Identity by 09/02/2020 UTC to continue winning jobs on Upwork. Get started.
+Yelp scrapper
+Data Extraction
+Posted 1 day ago
+I will provide you a list of yelp.com 134 categories and I need you to scrape the following from their listing.   I will provide you will the url of each of the categories that need to be scrapped
+
+Name
+Sub-category 1
+sub category 2
+sub category 3
+Phone
+address
+website url
+Monday Hours
+Tuesday Hours
+Wednesday Hours
+Thursday Hours
+Friday Hours
+Saturday Hours
+Sunday Hours
+
+I need to get the data back in the form of a csv file that I will be able to import into my database.
+Hours to be determined
+Hourly
+Less than a monthProject Length
+$$
+Intermediate levelI am looking for a mix of experience and value
+Project Type:One-time project
+You will be asked to answer the following questions when submitting a proposal:
+
+Do you have any questions about the job description?
+What challenging part of this job are you most experienced in?
+What questions do you have about the project?
+Preferred qualifications
+Job Success Score: At least 90%
+Include Rising Talent: Yes
+English level:  Conversational
+Amount earned: $1k+
+Activity on this job
+Proposals:  20 to 50
+Last viewed by client:  1 day ago
+Interviewing: 0
+Invites sent: 0
+Unanswered invites: 0
+Upgrade your membership to see the bid range 
+Flag as inappropriate
+Required Connects to submit a proposal: 2 
+Available Connects: 8
+About the client
+ Payment method verified
+ 4.56 of 6 reviews
+United States
+Las Vegas 10:26 pm
+23 jobs posted
+40% hire rate, 1 open job
+$2k+ total spent
+9 hires, 0 active
+$28.95/hr avg hourly rate paid
+60 hours
+Member since Oct 13, 2015
+Job link
+https://www.upwork.com/jobs/~018bca3c99d71b7019
+Client's recent history (8)
+Wordpress, WooCommerce Custimizations
+Aug 2018 - Sep 2018
+23 hrs @ $10.00/hr
+Billed: $230.00
+To freelancer: sakshi s. No feedback given
+WooCommerce Email Fix
+No feedback given
+Jul 2018 - Aug 2018
+Fixed-price $96.00
+To freelancer: Benjamin C. 
+Customize WooCommerce Bookings
+ Mr. James was an excellent client for woocommerce tour booking project that I worked on. All expectations and requirements were communicated upfront ... more
+Dec 2017 - Jan 2018
+Fixed-price $520.00
+To freelancer: Lalit S.  Pleasure to work wit Lalit on this, will be hiring again
+Custom html5 post development inside wordpress
+No feedback given
+May 2017 - Jun 2017
+37 hrs @ $50.00/hr
+Billed: $1,516.66
+To freelancer: Dmitry O. No feedback given
+Jacascript, PHP, My SQL
+ Good client and have good idea.
+Oct 2016 - Oct 2016
+Fixed-price $50.00
+To freelancer: Maya Y. 
+View more (3)
+Similar Jobs on Upwork
+Web Scrapper I need someone to make a Python script that cand scrape the information from several clothing websites
+Web scrapper I need someone to help me with web scrapping for a new web page
+YELP & Google Reviews I'm looking for someone with many Yelp & Google accounts to post reviews. Accounts must look like they are American accounts
+Yelp API integration expert We need to show Yelp reviews and reply to yelp reviews from our platform - need a developer with Yelp experience.
+Scrapper Technical Specification We are a 5 star Upwork employer who are looking for long term relationships and rockstars. We are looking for a specification writer or a business analyst for a new platform. Please respond with a cover letter that includes the following: 1. You must include I am a human not a computer in the first lines of your bid.
+About Us
+Feedback
+Community
+Trust & Safety
+Help & Support
+Upwork Foundation
+Terms of Service
+Privacy Policy
+Accessibility
+Desktop App
+Cookie Policy
+Enterprise Solutions
+Mobile
+  
+© 2015 - 2020 Upwork® Global Inc.
