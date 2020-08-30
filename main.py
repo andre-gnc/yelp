@@ -40,7 +40,6 @@ place_tags = tag.find_elements_by_class_name('lemon--div__09f24__1mboc.container
                                              '--top__09f24__1H_WE.border--right__09f24__28idl.border'
                                              '--bottom__09f24__2FjZW.border--left__09f24__33iol.border-color'
                                              '--default__09f24__R1nRO')
-print(len(place_tags))
 
 for place_counter, place_tag in enumerate(place_tags, 1):
     if place_counter == 1 or place_counter == 2 or place_counter == 33:
@@ -70,9 +69,6 @@ for place_counter, place_tag in enumerate(place_tags, 1):
     print('Website: ' + place_url)
     hours = driver.find_elements_by_class_name('lemon--p__373c0__3Qnnj.text__373c0__2U54h.no-wrap__373c0__2vNX7.text'
                                                '-color--normal__373c0__NMBwo.text-align--left__373c0__1Uy60')
-    # hours = driver.find_elements_by_class_name('lemon--tr__373c0__14NN0.table-row__373c0__3wipe')
-    print(len(hours))
-    # hour_each = ''
     for hours_counter, hour in enumerate(hours, 1):
         if hours_counter == 1:
             print('Mon: ' + hour.text)
