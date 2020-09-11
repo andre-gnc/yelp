@@ -1,12 +1,16 @@
 import os
-# from time import sleep
+from time import sleep
 
+import pandas
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
+
+
+# from selenium.webdriver.support.wait import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as ec
+# from selenium.webdriver.common.by import By
 
 
 def make_soup(ms_url):
@@ -25,66 +29,145 @@ def make_driver_chrome(mdc_url):
 
 TIMEOUT = 30
 
-url = 'https://www.yelp.com/search?cflt=restaurants&find_loc=San+Francisco%2C+CA'
+item_no = 120
+excel_entries = 0
+item_dict = {}
+page = 0
+page_test = 'yes'
+test_page_amount = 5
+categories = ''
+phone = ''
+website = ''
 
-driver = make_driver_chrome(url)
-driver.set_window_position(150, 200)
-driver.minimize_window()
+# url = 'https://www.yelp.com/search?find_desc=plumbing&find_loc=Atlanta%2C+GA&ns=1'
+url = 'https://www.yelp.com/search?find_desc=plumbing&find_loc=Atlanta%2C%20GA&start=120'
 
-wait = WebDriverWait(driver, TIMEOUT)
-tag = wait.until(ec.presence_of_element_located((By.CLASS_NAME, 'lemon--ul__09f24__1_cxs')))
-place_tags = tag.find_elements_by_class_name('lemon--div__09f24__1mboc.container__09f24__21w3G'
-                                             '.hoverable__09f24__2nTf3.margin-t3__09f24__5bM2Z.margin'
-                                             '-b3__09f24__1DQ9x.padding-t3__09f24__-R_5x.padding-r3__09f24__1pBFG'
-                                             '.padding-b3__09f24__1vW6j.padding-l3__09f24__1yCJf.border'
-                                             '--top__09f24__1H_WE.border--right__09f24__28idl.border'
-                                             '--bottom__09f24__2FjZW.border--left__09f24__33iol.border-color'
-                                             '--default__09f24__R1nRO')
+while True:
 
-for place_counter, place_tag in enumerate(place_tags, 1):
-    if place_counter == 1 or place_counter == 2 or place_counter == 33:
-        continue
-    place_url = place_tag.find_element_by_xpath('/html/body/div[1]/div[4]/div/div[1]/div[1]/div[2]/div[2]/ul/li['
-                                                '6]/div/div/div/div[2]/div[1]/div/div[1]/div/div['
-                                                '1]/div/div/h4/span/a').get_attribute('href')
-    print(place_counter - 2)
-    driver.get(place_url)
-    name = driver.find_element_by_xpath('/html/body/div[2]/div[3]/div/div[4]/div/div/div[2]/div/div/div[1]/div/div['
-                                        '1]/div[1]/div/div/div[1]/h1').text
-    print('Name: ' + name)
-    categories = driver.find_element_by_xpath('/html/body/div[2]/div[3]/div/div[4]/div/div/div[2]/div/div/div['
-                                              '1]/div/div[1]/div[1]/div/div/span[2]').text
-    print('Categories: ' + categories)
-    phone = driver.find_element_by_xpath('/html/body/div[2]/div[3]/div/div[4]/div/div/div[2]/div/div/div[1]/div/div['
-                                         '2]/div/div/section[1]/div/div[2]/div/div[2]/p[2]').text
-    print('Phone: ' + phone)
-    address_tag = driver.find_element_by_xpath('/html/body/div[2]/div[3]/div/div[4]/div/div/div[2]/div/div/div['
-                                               '1]/div/div[1]/section[3]/div[2]/div[1]/div/div/div/div[1]')
-    address_items = address_tag.find_elements_by_class_name('lemon--p__373c0__3Qnnj.text__373c0__2U54h.text-color'
-                                                            '--normal__373c0__NMBwo.text-align--left__373c0__1Uy60')
-    address = ''
-    for address_item_counter, address_item in enumerate(address_items, 1):
-        address = address + address_item.text + ' '
-    print('Address: ' + address)
-    print('Website: ' + place_url)
-    hours = driver.find_elements_by_class_name('lemon--p__373c0__3Qnnj.text__373c0__2U54h.no-wrap__373c0__2vNX7.text'
-                                               '-color--normal__373c0__NMBwo.text-align--left__373c0__1Uy60')
-    for hours_counter, hour in enumerate(hours, 1):
-        if hours_counter == 1:
-            print('Mon: ' + hour.text)
-        elif hours_counter == 2:
-            print('Tue: ' + hour.text)
-        elif hours_counter == 3:
-            print('Wed: ' + hour.text)
-        elif hours_counter == 4:
-            print('Thu: ' + hour.text)
-        elif hours_counter == 5:
-            print('Fri: ' + hour.text)
-        elif hours_counter == 6:
-            print('Sat: ' + hour.text)
-        elif hours_counter == 7:
-            print('Sun: ' + hour.text)
+    page += 1
 
-    break
+    driver = make_driver_chrome(url)
+    driver.set_window_position(150, 200)
+    # driver.minimize_window()
+    sleep(5)
 
-driver.quit()
+    # wait = WebDriverWait(driver, TIMEOUT)
+    # tag = wait.until(ec.presence_of_element_located((By.CLASS_NAME,
+    # 'lemon--ul__373c0__1_cxs.undefined.list__373c0__2G8oH')))
+    place_tags = driver.find_elements_by_class_name('lemon--div__373c0__1mboc.container__373c0__3HMKB'
+                                                    '.hoverable__373c0__VqkG7.margin-t3__373c0__1l90z.margin'
+                                                    '-b3__373c0__q1DuY.padding-t3__373c0__1gw9E.padding'
+                                                    '-r3__373c0__57InZ.padding-b3__373c0__342DA.padding'
+                                                    '-l3__373c0__1scQ0.border--top__373c0__3gXLy.border'
+                                                    '--right__373c0__1n3Iv.border--bottom__373c0__3qNtD.border'
+                                                    '--left__373c0__d1B7K.border-color--default__373c0__3-ifU')
+
+    for place_counter, place_tag in enumerate(place_tags, 1):
+        if place_counter <= 10 or place_counter >= 31:
+            continue
+        place_url = place_tag.find_element_by_class_name(
+            'lemon--a__373c0__IEZFH.link__373c0__1UGBs.link-color--inherit__373c0__1J-tq.link-size'
+            '--inherit__373c0__3K_7i').get_attribute('href')
+
+        # print(place_counter - 10)
+        print(item_no + 1)
+        company_driver = make_driver_chrome(place_url)
+        company_driver.set_window_position(150, 200)
+        sleep(5)
+
+        try:
+            name = company_driver.find_element_by_xpath('/html/body/div[2]/div[3]/div/div[3]/div/div/div['
+                                                        '2]/div/div/div[1]/div/div[1]/div[1]/div/div/div[1]/h1').text
+        except NoSuchElementException:
+            name = 'Grab it manually please!'
+        print('Name: ' + name)
+
+        try:
+            category_tags = company_driver.find_element_by_class_name(
+                'lemon--a__373c0__IEZFH.link__373c0__2-XHa.editCategories__373c0__3oys3.link--chiclet__373c0__eqf92'
+                '.link-color--blue-dark__373c0__4vqlF.link-size--default__373c0__fPIdG').find_element_by_xpath(
+                '..').find_elements_by_class_name(
+                'lemon--a__373c0__IEZFH.link__373c0__2-XHa.link-color--inherit__373c0__2f-vZ.link-size'
+                '--inherit__373c0__nQcnG')
+            categories = ''
+            for category_tags_counter, category_tag in enumerate(category_tags, 1):
+                categories = categories + category_tag.text + ' '
+        except NoSuchElementException:
+            categories = 'Grab it manually please!'
+        print('Categories: ' + categories)
+
+        try:
+            address_tag = company_driver.find_element_by_tag_name('address')
+            address_items = address_tag.find_elements_by_tag_name('p')
+            address = ''
+            for address_item_counter, address_item in enumerate(address_items, 1):
+                address = address + address_item.text + ' '
+            # print('Address Tag amount: ' + str(len(address_tag)))
+        except NoSuchElementException:
+            address = 'Grab it manually please!'
+        print('Address: ' + address)
+
+        try:
+            phone_tags = company_driver.find_element_by_class_name(
+                'lemon--span__373c0__3997G.icon__373c0__2dvNm.icon--24-phone-v2.icon--v2__373c0__1rfbs'
+                '.icon__373c0__3n-2P').find_element_by_xpath('..').find_element_by_xpath(
+                '..').find_elements_by_tag_name('p')
+            for phone_tags_counter, phone_tag in enumerate(phone_tags, 1):
+                if phone_tags_counter == 2:
+                    phone = phone_tag.text
+                    print('Phone: ' + phone)
+        except NoSuchElementException:
+            phone = 'Grab it manually please!'
+            print('Phone: ' + phone)
+
+        try:
+            website_tags = company_driver.find_element_by_class_name(
+                'lemon--span__373c0__3997G.icon__373c0__2dvNm.icon--24-external-link-v2.icon--v2__373c0__1rfbs'
+                '.icon__373c0__3n-2P').find_element_by_xpath('..').find_element_by_xpath(
+                '..').find_elements_by_tag_name('div')
+            for website_tags_counter, website_tag in enumerate(website_tags, 1):
+                if website_tags_counter == 2:
+                    website = website_tag.text
+        except NoSuchElementException:
+            website = 'No website.'
+        print('Website: ' + website)
+
+        print('Profile: ' + place_url)
+        print(item_no + 1)
+        print('\n')
+
+        excel_entries += 1
+        item_no += 1
+        item_dict[item_no] = [name, categories, address, phone, website, place_url]
+
+        if excel_entries == 10:
+            df_items = pandas.DataFrame.from_dict(
+                item_dict, orient='Index',
+                columns=['Name', 'Categories', 'Address', 'Phone', 'Website', 'Profile'])
+            df_items.to_excel('data.xlsx')
+            # df_items.to_csv('data.csv')
+            excel_entries = 0
+
+        company_driver.quit()
+
+    try:
+        url = driver.find_element_by_class_name('lemon--a__373c0__IEZFH.link__373c0__2MnoO.next-link.navigation'
+                                                '-button__373c0__23BAT.link-color--inherit__373c0__23vKF.link-size'
+                                                '--inherit__373c0__cQmDm').get_attribute('href')
+        print('Next url: ' + url)
+    except NoSuchElementException:
+        print('Last page. It\'s finished')
+        driver.quit()
+        break
+
+    if page == test_page_amount and page_test == 'yes':
+        driver.quit()
+        print('Next url: ' + url)
+        break
+
+    driver.quit()
+
+df_items = pandas.DataFrame.from_dict(
+    item_dict, orient='Index', columns=['Name', 'Categories', 'Address', 'Phone', 'Website', 'Profile'])
+df_items.to_excel('data.xlsx')
+# df_items.to_csv('data.csv')

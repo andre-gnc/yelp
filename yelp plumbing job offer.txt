@@ -1,0 +1,121 @@
+Skip to main content
+
+
+Find Jobs
+FIND WORK
+MY JOBS
+REPORTS
+MESSAGES
+Andre Goranico
+Job details
+Yellowpages scraping required
+Data Extraction
+Posted 19 hours ago
+I need to get data from Ye*p.
+
+Categories example:
+Plumbing
+Home Cleaning
+Flooring
+
+Locations example:
+Atlanta, GA
+Miami, FL
+Union City, NJ
+
+
+I want you to get me all the results returned in excel.
+
+I want the following fields only:
+Business Name
+Category/Categories
+Address(Street, City, State, Zip)
+Phone
+Website Url
+Profile page Url.
+
+What is your quote per million unique/non-duplicate results presented in Excel?
+
+Notes:
+
+*Each search will return results in several pages, so you have to crawl all pages. For example Page 1, Page 2....till the last page.
+
+*If you have any issue about separating address fields into Street, City, State, Zip columns, just place the address in one column of Excel, I will myself handle that.
+
+*Job Budget is a placeholder only. Please bid your best price.
+
+*Only bid if you have experience handling large data extraction tasks. I think you will need to rotate proxies in order to bypass the IP blocking and other security features.
+
+*I want current data only. Please don't send me any previously scraped data set. If I find that, I may not accept any of your work.
+
+Happy bidding
+$999,999
+Fixed-price
+$$
+Intermediate levelI am looking for a mix of experience and value
+Project Type:Ongoing project
+Skills and expertise
+Web Scraper Data Scraping Data Science Data Extraction Web Crawling
+Activity on this job
+Proposals:  15 to 20
+Last viewed by client:  19 hours ago
+Interviewing: 5
+Invites sent: 15
+Unanswered invites: 4
+Upgrade your membership to see the bid range 
+Flag as inappropriate
+Required Connects to submit a proposal: 6 
+Available Connects: 16
+About the client
+ Payment method verified
+ 5.00 of 1 review
+India
+Moradabad 02:25 pm
+7 jobs posted
+100% hire rate, 1 open job
+$2k+ total spent
+38 hires, 0 active
+$4.77/hr avg hourly rate paid
+5 hours
+Member since Jun 8, 2012
+Job link
+https://www.upwork.com/jobs/~0177c22541d99f5983
+Client's recent history (33)
+Yellowpages scraping required
+Jan 2020 - Jan 2020
+Fixed-price $10.00
+To freelancer: Petr L.  Thanks
+Private
+Apr 2014 - Oct 2016
+To freelancer: Private  Great work
+Private
+Apr 2014 - Aug 2014
+To freelancer: Private  Good Job.
+Private
+Aug 2014 - Aug 2014
+To freelancer: Private  Thanks for your sincere efforts.
+Private
+Apr 2014 - May 2014
+To freelancer: Private  Good Job.
+View more (28)
+Similar Jobs on Upwork
+Web Scraping I am seeking an individual who can conduct complex data extraction from specific websites.
+Web Scraping Needed Need webscraping done to generate potential leads for cold calling. Leads are in various sectors of the manufacturing industry that utilize metals testing equipment. Primarily looking for someone who is efficient and can generate a large and relevant number of results.
+Web Scrape I need a list of Apartment complexes in California. Ideally This would result in a mail merge list of occupant addresses. Ideally the list would be sorted by quality of complex. We are looking for the complexes with the worst living conditions.
+Web Scraping Basically we want to create a script that takes in say a database of keywords, uses search keyword with the search operators - gets results for the respective keywords and save them to db. Title, url , keyword and build a database of these sites Constraints: 1. We will be using this scraper in very large set of keywords. So, the scraper must be fast. 2. We will need about 100 results for each keywords. Language: Python is preferred as our development team is familiar with the language.
+Web scraping Hello, I am an economist at Colgate University, and am looking for help with downloading PDF files from a website quickly for a research project. The deliverable will be the PDF documents downloaded into named folders. The folders can be returned to me using Google Drive. Best, Fatima
+About Us
+Feedback
+Community
+Trust & Safety
+Help & Support
+Upwork Foundation
+Terms of Service
+Privacy Policy
+Accessibility
+Desktop App
+Cookie Policy
+Enterprise Solutions
+Mobile
+  
+© 2015 - 2020 Upwork® Global Inc.

@@ -1,3 +1,3 @@
-class_tag = 'lemon--p__373c0__3Qnnj text__373c0__2U54h no-wrap__373c0__2vNX7 text-color--normal__373c0__NMBwo text-align--left__373c0__1Uy60'
+class_tag = 'lemon--a__373c0__IEZFH link__373c0__2MnoO next-link navigation-button__373c0__23BAT link-color--inherit__373c0__23vKF link-size--inherit__373c0__cQmDm'
 class_replace = class_tag.replace(' ', '.')
 print(class_replace)
